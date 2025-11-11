@@ -1,0 +1,30 @@
+version: 6
+environments:
+  default:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge/
+    packages:
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/rattler-build-0.49.0-h9113d71_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/yamlfmt-0.20.0-hecf9c18_0.conda
+packages:
+- conda: https://conda.anaconda.org/conda-forge/osx-64/rattler-build-0.49.0-h9113d71_0.conda
+  sha256: a7f51f475794f683f0db8ac337b5c9ec127830d949a9cb23e1fa43ae54736c72
+  md5: 3ac07cebcdfa3a6f662bde1f065dd47a
+  depends:
+  - __osx >=10.13
+  constrains:
+  - __osx >=10.13
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 15198150
+  timestamp: 1761689346258
+- conda: https://conda.anaconda.org/conda-forge/osx-64/yamlfmt-0.20.0-hecf9c18_0.conda
+  sha256: fe75a0528fd848ec2a702f003fb2009369aa403df065b4bb1730318c8197405b
+  md5: 3878db5d681e6689bbd7d3f36c8c3cde
+  constrains:
+  - __osx>=10.12
+  license: Apache-2.0
+  license_family: APACHE
+  size: 1585334
+  timestamp: 1761148962983

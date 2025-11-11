@@ -1,0 +1,15 @@
+[workspace]
+authors = ["Nam Nguyen <nguyenvietnam2401@gmail.com>"]
+channels = ["conda-forge"]
+name = "nam-forge"
+platforms = ["osx-64"]
+version = "0.1.0"
+
+[tasks]
+build = "rattler-build build --recipe-dir . --output-dir packages/"
+build-only = { args = ["name"], cmd = "rattler-build build --recipe recipes/{{ name }} --output-dir packages/" }
+fmt-yaml = "yamlfmt"
+
+[dependencies]
+yamlfmt = ">=0.20.0,<0.21"
+rattler-build = ">=0.49.0,<0.50"

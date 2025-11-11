@@ -1,0 +1,31 @@
+context:
+  name: radare2
+  version: 6.0.4
+  sha256: d5d92e3a2dbe050be1ce0ec2a2cd2e408b068ae69d6a6485b57a5df88fa63ba3
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/radareorg/${{ name }}/releases/download/${{ version }}/${{ name }}-${{ version }}.tar.xz
+  sha256: ${{ sha256 }}
+
+build:
+  script: ./sys/install.sh
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+
+tests:
+  - script:
+      - r2 --help
+
+about:
+  homepage: https://radare.org
+  summary: UNIX-like reverse engineering framework and command-line toolset
+  description: |
+    A free/libre toolchain for easing several low level tasks like forensics,
+    software reverse engineering, exploiting, debugging, etc.
+  repository: https://github.com/radareorg/radare2
