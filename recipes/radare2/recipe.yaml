@@ -12,11 +12,12 @@ source:
   sha256: ${{ sha256 }}
 
 build:
-  script: ./sys/install.sh
+  script: ./sys/install.sh --install
 
 requirements:
   build:
     - ${{ compiler('c') }}
+    - make
 
 tests:
   - script:

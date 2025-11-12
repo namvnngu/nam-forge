@@ -8,6 +8,8 @@ version = "0.1.0"
 [tasks]
 build = "rattler-build build --recipe-dir . --output-dir packages/"
 build-only = { args = ["name"], cmd = "rattler-build build --recipe recipes/{{ name }} --output-dir packages/" }
+clean = "rm -rf packages/ && pixi clean"
+clean-pkg = "rm -rf packages/bld/ packages/src_cache/ packages/test/"
 fmt-yaml = "yamlfmt"
 
 [dependencies]
